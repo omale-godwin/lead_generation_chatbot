@@ -1,0 +1,47 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+ 
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: web dev path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: web_development
+    entities:
+    - service: "mobile"
+  - slot_was_set:
+    - service: "mobile"
+  - action: custom_response
+  - action: lead_form
+  - active_loop: lead_form
+  - active_loop: null
+  - action: utter_lead_q2
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5

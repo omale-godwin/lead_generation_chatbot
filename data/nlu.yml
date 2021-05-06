@@ -1,0 +1,184 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: web_development
+  examples: |
+    - [Web](service) Application Development
+    - [Mobile](service) App Development
+    - [Frontend](service) Development
+    - [devops](service) and cloud technology
+    - AI & [Machine](service) Learning
+
+- intent: website_description
+  examples: |
+    - [i want a spot website](description)
+    - [i want a music website](description)
+    - [i want a busines website](description)
+    - [i need a mobile application to connect bank](description)
+    - [cloud and deveops engineer](description)
+    - [artificail](description) intelligent and [machine](description) learning
+    - [i want to implement chatbot for my business](description)  
+    - [frontend application to power my business](description) 
+    - [business application](description)
+
+
+# - intent: mockup
+#   examples: |
+#     - [Wireframes](mockup) mockup
+#     - RFP or any [Document](mockup)
+#     - [Non](mockup) design
+#     - [work](mockup) design
+#     - [word documenent](mockup) design
+   
+# - intent: yes_to_url
+#   examples: |
+#     - [yes](yes_to_url) i have
+#     - [i do have](yes_to_url) i don't
+#     - [yes](yes_to_url) i have
+#     - [i do](url)
+#     - [there is url](yes_to_url)
+   
+
+# - intent: url
+#   examples: |
+#     - [gradedproject.com](url) 
+#     - [www.gradedproject.com](url) 
+#     - [https://www.gradedproject.com](url) 
+#     - the url is [https://www.tools4business.com](url)
+#     - [www.someonesite.com](url) design
+#     - [https://www.website.com](url) is the url
+#     - [www.website.com](url) is the url i have
+
+- intent: ask_timeline
+  examples: |
+    - [Immediately](timeline) 
+    - [within a month](timeline)
+    - within the next [less 3 months](timeline)
+    - [after 3 months](timeline)
+    
+
+- intent: ask_amount
+  examples: |
+    - [Below $5000](amount) 
+    - [between $5000 - $15000](amount) 
+    - [between $15000 - $25000](amount) 
+    - [$25000 and above](amount) 
+   
+
+- intent: ask_name
+  examples: |
+    - [john peter](name) is my name
+    - my name is [john peter](name)
+    - i am [john peter](name)
+    - [joseph](name) 
+    - i am [danladi](name) 
+    - [agada](name) is my name
+
+- intent: ask_email
+  examples: |
+    - [umare@gmail.com]{"entity": "email", "value": "umarsani@gmail.com"}
+    - [working@gmail.com]{"entity":"email", "value": "danladi@gmail.com"} is my email  
+    - [tools4busines@gmail.com]{"entity":"email", "value": "umarsani@gmail.com"} 
+    - my email is [weinformed@gmail.com]{"entity":"email", "value": "tool4business@gmail.com"} 
+    - [someonesite@gmail.com]{"entity":"email", "value": "weinformed@gmail.com"} 
+    - [website@gmail.com]{"entity":"email", "value": "website@gmail.com"}  is the email address
+    - [best@gmail.com]{"entity":"email", "value": "best@gmail.com"} 
+  
+- intent: ask_phone
+  examples: |
+    - [+9934536527](phone) is my phone number
+    - this is my phone number [09032196732](phone) 
+    - my phone number is [0903452789](phone)
+    - [0814563543](phone)
+

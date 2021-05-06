@@ -1,0 +1,161 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- web_development:
+    use_entities:
+    - service
+- website_description
+- mockup
+- yes_to_url
+- url
+- ask_timeline
+- ask_name
+- ask_email:
+    use_entities:
+    - email
+- ask_phone
+- ask_amount
+entities:
+- description
+- timeline
+- name
+- email
+- phone
+- amount
+- service
+slots:
+  description:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  service:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  timeline:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  email:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  phone:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
+  amount:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hi! I am omale from bizness-bot Technologies . We provide high quality and
+      cost-effective Web, Mobile, Chatbot and Voicebot solutions.
+  utter_menu:
+  - buttons:
+    - payload: Web Application Development
+      title: Web Application Development
+    - payload: Mobile App Development
+      title: Mobile App Development
+    - payload: Chatbot Development
+      title: Chatbot Development
+    - payload: Frontend Development
+      title: Frontend Development
+    - payload: devops and cloud technology
+      title: devops and cloud technology
+    - payload: AI & Machine Learning
+      title: AI & Machine Learning
+    text: What are you looking for today?
+  utter_lead_q1:
+  - text: Great. We have developed more than 20+ web applications till date!
+  utter_ask_description:
+  - text: Can you share with some brief description of your requirements?
+  utter_ask_timeline:
+  - buttons:
+    - payload: Immediately
+      title: Immediately
+    - payload: within a month
+      title: within a month
+    - payload: within the next 3 months
+      title: within the next 3 months
+    - payload: after 3 months
+      title: after 3 months
+    text: When do you plan to enter development with this project?
+  utter_ask_amount:
+  - buttons:
+    - payload: Below $5000
+      title: Below $5000
+    - payload: between $5000 - $15000
+      title: $5000 - $15000
+    - payload: between $15000 - $25000
+      title: $15000 - $25000
+    - payload: $25000 and above
+      title: $25000 and above
+    text: "Great!\n\nWhat is your earmarked budget for this project?"
+  utter_ask_name:
+  - text: Great. May I know your name please?
+  utter_ask_email:
+  - text: Can you please share your email ID? Trust us, we will never spam!
+  utter_ask_phone:
+  - text: Can I have your phone number
+  utter_lead_q2:
+  - text: Thanks for answering all our questions and being this patient. We appreciate
+      it!
+  utter_lead_q3:
+  - text: "Here is your data: \n - requirement: {description}\n - timeline: {timeline}\n\
+      \ - budget: {amount}\n - name: {name}\n - email: {email}\n - phone: {phone}"
+  utter_lead_q4:
+  - text: I will have our Business Experts get in touch with you soon, to make your
+      project a reality!
+  utter_lead_q5:
+  - text: In the meanwhile for anything, you can contact us at sales@cedextech.com
+      or +91 888 999 9999
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_submit
+- custom_response
+forms:
+  lead_form:
+    amount:
+    - entity: amount
+      type: from_entity
+    description:
+    - entity: description
+      type: from_entity
+    email:
+    - entity: email
+      type: from_entity
+    name:
+    - entity: name
+      type: from_entity
+    phone:
+    - entity: phone
+      type: from_entity
+    timeline:
+    - entity: timeline
+      type: from_entity
